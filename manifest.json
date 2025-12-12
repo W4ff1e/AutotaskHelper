@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Autotask Helper",
+  "version": "1.0",
+  "description": "Helpers for Autotask",
+  "permissions": [
+    "contextMenus",
+    "scripting",
+    "clipboardRead",
+    "clipboardWrite",
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.autotask.net/*"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ],
+  "host_permissions": [
+    "*://*.autotask.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

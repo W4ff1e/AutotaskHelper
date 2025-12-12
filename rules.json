@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://\\1/Mvc/ServiceDesk/TicketDetail.mvc?ticketId=\\2"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://([^/]+)/Autotask/AutotaskExtend/ExecuteCommand\\.aspx\\?.*[?&](?:TicketID|ticketID|ticketId)=([0-9]+)",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
