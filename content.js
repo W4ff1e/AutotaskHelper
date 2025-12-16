@@ -56,8 +56,6 @@ const cleanTicketUrl = (originalUrl) => {
             if (ticketId) {
                 // Construct the MVC URL manually
                 // We assume the MVC path is always /Mvc/ServiceDesk/TicketDetail.mvc 
-                // but we should check if we can rely on that. 
-                // Usually autotask.net has this structure.
                 return `${url.origin}/Mvc/ServiceDesk/TicketDetail.mvc?ticketId=${ticketId}`;
             }
         }
