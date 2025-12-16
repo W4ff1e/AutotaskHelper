@@ -32,4 +32,6 @@ You can toggle specific features on or off in the Extension Options:
 
 ## Privacy
 
-This extension respects your privacy and **does not collect any user data**. It runs entirely locally on your machine. See [Privacy Policy](docs/PRIVACYPOLICY.md) for details.
+This extension respects your privacy and **does not collect any user data**. It runs entirely locally on your machine. See [PRIVACYPOLICY.md](PRIVACYPOLICY.md) for details.
+
+For full documentation, see [docs/index.html](docs/index.html).
